@@ -11,6 +11,8 @@ COPY package*.json ./
 # Install dependencies in Docker
 RUN npm install
 
+RUN npm install -g cordova ionic
+
 RUN ionic build
 # Copy app from local environment into the Docker image
 COPY . .
